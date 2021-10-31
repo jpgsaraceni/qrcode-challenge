@@ -1,5 +1,7 @@
 # Fourth code challenge - Eniac I Alpha EdTech
 
+Devoloped in collaboration with [D-nDev](https://github.com/D-nDev)
+
 ## Run this app
 
 You will need [Node.js](https://nodejs.org/en/) installed on your machine.
