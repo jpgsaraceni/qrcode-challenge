@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registrar</title>
+  <link rel="stylesheet" href="/styles/register.css">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <div class="flexcontainer">
+    <div class="flex-item-register">
+      <h1>Crie uma conta</h1>
+
+      <label for="username">Seu Nome</label>
+      <input type="text" name="name" class="registerinput" id="nameregister" placeholder="Seu Nome" required>
+
+      <label for="username">Seu E-mail</label>
+      <input type="text" name="email" class="registerinput" id="emailregister" placeholder="Seu E-mail" required>
+
+      <label for="password">Sua Senha</label>
+      <input type="password" name="password" class="registerinput" id="passwordregister" placeholder="Sua senha"
+        required>
+
+      <label for="password">Seu Telefone</label>
+      <input type="text" name="telnumber" class="registerinput" id="telregister" placeholder="Seu telefone" required>
+
+      <button type="button" id="mainbutton-register" class="mainbutton">Cadastrar</button>
+    </div>
+  </div>
+</body>
+
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+  integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/scripts/utils-register.js"></script>
+<script src="/scripts/utilsMask.js"></script>
+
+</html>

@@ -1,0 +1,28 @@
+[
+  {
+    "id": 2,
+    "name": "test",
+    "email": "collaborator@test.test",
+    "telnumber": 11970151606,
+    "type": "fiscal",
+    "password": "$2b$10$pXn2QbFYo7FWEAYe2yVJvu1TyQ0IbE3KI4/GhuS2JWn.KLgbIFuta"
+  },
+  {
+    "id": 1,
+    "name": "Diego",
+    "email": "diego-s.novaes@hotmail.com",
+    "telnumber": "(11) 97015-1606",
+    "password": "$2b$10$pXn2QbFYo7FWEAYe2yVJvu1TyQ0IbE3KI4/GhuS2JWn.KLgbIFuta",
+    "type": "admin",
+    "photo": "http://res.cloudinary.com/alphapets/image/upload/v1625028111/yfdvjug8cjwozhbafbih.jpg"
+  },
+  {
+    "id": 3,
+    "name": "test",
+    "email": "admin@test.test",
+    "telnumber": "(11) 97015-1606",
+    "password": "$2b$10$pXn2QbFYo7FWEAYe2yVJvu1TyQ0IbE3KI4/GhuS2JWn.KLgbIFuta",
+    "type": "admin",
+    "photo": "http://res.cloudinary.com/alphapets/image/upload/v1625028111/yfdvjug8cjwozhbafbih.jpg"
+  }
+]

@@ -1,0 +1,142 @@
+body {
+  margin: 0;
+  background-color: #f8f4f4;
+  font-family: 'Roboto', sans-serif;
+}
+
+p {
+  text-align: center;
+  margin: 0;
+}
+
+h1 {
+  text-align: center;
+}
+
+label {
+  display: inline-block;
+  margin-bottom: 1vh;
+}
+
+.logincontainer {
+  display: flex;
+}
+
+.flex-side {
+  flex: 1;
+}
+
+.left {
+  background: url('/assets/img/login_bg.png') no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  flex: 1 45%;
+}
+
+.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #F5F8FA;
+  flex: 1 55%;
+}
+
+.login-text {
+  font-weight: 500;
+  font-size: 32px;
+  margin-bottom: 2vh;
+}
+
+.mainbutton_old {
+  border: none;
+  background-color: #3d68ff;
+  color: white;
+  width: 102px;
+  height: 40px;
+  border-radius: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.mainbutton {
+  display: block;
+  background-color: #2c64cc;
+  width: 70.5%;
+  height: 60px;
+  color: white;
+  text-align: center;
+  border: 1px solid #E6E6F0;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logininput_old {
+  display: block;
+  padding: .375rem .75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  background-clip: padding-box;
+  border: 1px solid #ced4da;
+  border-radius: .25rem;
+  transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+  margin-bottom: 1.5vh;
+}
+
+.logininput {
+  width: 70%;
+  height: 60px;
+  background-color: #fff;
+  text-indent: 20px;
+  border-radius: 5px;
+  display: inline-block;
+  border: 1px solid #E6E6F0;
+  margin-bottom: 2vh;
+}
+
+.flex-item {
+  margin-top: 2vh;
+}
+
+.flex-item-login {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 2vh;
+  padding-right: 2vh;
+  margin-top: 2vh;
+}
+
+@media only screen and (max-width: 600px) and (min-width: 1px) {
+  .left {
+    display: none;
+  }
+
+  .logincontainer {
+    background-color: #F5F8FA;
+    height: 100vh;
+  }
+
+  .right {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1 1;
+  }
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

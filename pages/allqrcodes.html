@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Painel || QR Codes Gerados</title>
+  <link rel="stylesheet" href="/styles/painel.css">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+  <link href="https://unpkg.com/tailwindcss/dist/tailwind.min.css" rel="stylesheet">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.0.0/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <script src="/scripts/logout.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <link rel="shortcut icon" href="/favicon-admin.ico" />
+</head>
+
+<body>
+  <!--MODALS-->
+
+  <div id="addevent" class="modal">
+    <label for="eventname">Nome do evento</label>
+    <input type="text" placeholder="Defina um nome ao evento" id="eventname" style="width: 100%" name="eventname"
+      class="inputs">
+
+    <label for="eventdescription">Descrição do evento</label>
+    <textarea type="text" cols="30" rows="10" placeholder="Defina uma descrição ao evento" id="eventdescription"
+      style="width: 100%" name="eventdescription" class="inputs"></textarea>
+
+    <label for="event-time">Data de realização</label>
+    <input type="datetime-local" name="event-time" id="eventdate" style="width: 100%" class="inputs">
+
+    <label for="capacity">Capacidade máxima</label>
+    <input type="number" name="capacity" class="inputs" style="width: 100%" id="capacity">
+
+    <label for="event-img">Imagem do evento</label><br />
+    <input type="file" name="event-img" onchange="fileSelectedHandlerEvent(this.files[0]);"
+      accept=".jpg,.png,.jpeg,.svg" id="event-img">
+    <button type="button" id="mainbutton-event" onclick="fileUploadHandlerEvent();" class="mainbutton">Enviar</button>
+  </div>
+
+  <div id="view-qrcode-details" class="modal">
+
+  </div>
+
+  <div id="addfiscal" class="modal">
+    <label for="fiscalname">Nome do fiscal</label>
+    <input type="text" placeholder="Defina um nome ao fiscal" style="width: 100%" name="fiscalname" class="inputs"
+      id="fiscalname">
+
+    <label for="fiscalemail">E-mail do fiscal</label>
+    <input type="email" placeholder="Defina o e-mail do fiscal" style="width: 100%" name="fiscalemail" class="inputs"
+      id="fiscalemail">
+
+    <label for="fiscalnumber">Telefone do fiscal</label>
+    <input type="text" placeholder="Defina o telefone do fiscal" style="width: 100%" name="fiscalnumber" class="inputs"
+      id="fiscalnumber">
+
+    <label for="fiscalpass">Senha do fiscal</label>
+    <input type="password" placeholder="Defina a senha do fiscal" style="width: 100%" name="fiscalpass" class="inputs"
+      id="fiscalpass">
+
+    <label for="fiscal-profile">Foto do fiscal</label><br />
+    <input type="file" name="fiscal-profile" onchange="fileSelectedHandlerFiscal(this.files[0]);"
+      accept=".jpg,.png,.jpeg,.svg" id="fiscal-profile">
+    <button type="button" id="mainbutton-fiscal" onclick="fileUploadHandlerFiscal();" class="mainbutton">Enviar</button>
+  </div>
+
+  <div id="changephoto" class="modal">
+    <label for="user-profile">Faça upload da foto abaixo:</label><br />
+    <input type="file" onchange="fileSelectedHandler(this.files[0]);" accept=".jpg,.png,.jpeg,.svg" name="user-profile"
+      id="user-profile">
+    <button type="button" id="mainbutton" onclick="fileUploadHandler();" class="mainbutton">Enviar</button>
+  </div>
+
+  <!--END MODALS-->
+
+  <div class="flex-container">
+    <aside class="flex-item-left">
+      <div class="brand-container drop-shadow-2xl">
+        <a href="#" class="brand-name drop-shadow-2xl">Painel Admin</a>
+      </div>
+      <nav>
+        <a href="dashboard" class="navitem">
+          <i class="far fa-user mr-2"></i>
+          Lista de usuários
+        </a>
+        <a onclick="modal3();" class="navitem">
+          <i class="fas fa-camera mr-2"></i>
+          Alterar foto de perfil
+        </a>
+        <a href="qrcodes" class="navitem active">
+          <i class="fas fa-qrcode mr-2"></i>
+          QR Codes Gerados
+        </a>
+        <a onclick="modal1();" class="navitem">
+          <i class="far fa-calendar-plus mr-2"></i>
+          Cadastrar evento
+        </a>
+        <a href="events" class="navitem">
+          <i class="fab fa-elementor mr-2"></i>
+          Lista de eventos
+        </a>
+        <a onclick="modal2();" class="navitem">
+          <i class="fas fa-user-tie mr-2"></i>
+          Cadastrar Fiscal
+        </a>
+        <a onclick="logoutAdmin();" class="navitem">
+          <i class="fas fa-sign-out-alt white mr-2"></i>
+          Deslogar
+        </a>
+      </nav>
+    </aside>
+
+    <div class="flex-item-right">
+      <div id="flex-user" class="flex-user">
+        <div>
+          <h1 id="welcome" class="text-sm welcome-text">Bem-vindo(a) de volta,</h1>
+        </div>
+      </div>
+      <h1 class="text-3xl userlist-text pb-6">Lista de QR Codes Gerados</h1>
+      <div class="flex flex-col">
+        <div class="-my-2 overflow-x-auto sm:-mx-6 lg:-mx-8">
+          <div class="py-2 align-middle inline-block min-w-full sm:px-6 lg:px-8">
+            <div class="shadow overflow-hidden border-b border-gray-200 sm:rounded-lg">
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th scope="col"
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      ID
+                    </th>
+                    <th scope="col"
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Link QR Token
+                    </th>
+                    <th scope="col"
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Dono
+                    </th>
+                    <th scope="col"
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Data de criação
+                    </th>
+                    <th scope="col"
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      Estado
+                    </th>
+                    <th scope="col"
+                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+                      ID do Evento
+                    </th>
+                    <th scope="col" class="relative px-6 py-3">
+                      <span class="sr-only">Ver detalhes</span>
+                    </th>
+                  </tr>
+                </thead>
+                <tbody id="body-qrcodes" class="bg-white divide-y divide-gray-200">
+
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"
+  integrity="sha512-pHVGpX7F/27yZ0ISY+VVjyULApbDlD0/X0rgGbTqCE7WFW5MezNTWG/dnhtbBuICzsd0WQPgpE4REBLv+UqChw=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="/scripts/modal.js"></script>
+<script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+<script src="/scripts/qrcode.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+<script src="/scripts/utils-adminQR.js"></script>
+<script src="/scripts/show_username.js"></script>
+<script src="/scripts/deleteuser.js"></script>
+<script src="/scripts/uploadphoto.js"></script>
+<script src="/scripts/registerEvent.js"></script>
+<script src="/scripts/registerFiscal.js"></script>
+<script src="/scripts/utilsMask.js"></script>
+<script src="/scripts/eventMinDate.js"></script>
+
+</html>

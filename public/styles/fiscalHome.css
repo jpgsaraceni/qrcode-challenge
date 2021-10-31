@@ -1,0 +1,205 @@
+* {
+  font-family: 'Ubuntu';
+}
+
+body {
+  background: #b2d6ff;
+  overflow: hidden;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background: #ffb32b;
+  height: 20vh;
+  min-height: 100px;
+  font-size: 24px;
+  box-shadow: 0px 0px 5px;
+  padding: 0 40px;
+}
+
+.logo-container {
+  display: flex;
+  width: 40vw;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+p {
+  place-self: center;
+  font-size: 36px;
+}
+
+nav {
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+}
+
+nav > button {
+  height: 100%;
+  padding: 10px 30px;
+}
+
+nav > button:hover {
+  color: #1f8fff;
+  background: #ffb638;
+}
+
+#logout {
+  font-size:18px;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow: scroll;
+  overflow-x: hidden;
+}
+
+main::-webkit-scrollbar {
+  width: 10px;
+}
+
+main::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #888;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.qrcode-form {
+  display: flex;
+  margin-top: 20vh;
+  flex-direction: column;
+  flex-wrap: wrap;
+  background-color: white;
+  padding: 50px;
+  border-radius: 8px;
+}
+
+#button-validate > button {
+  height: 20%;
+  color: #1f8fff;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+#button-validate > button:hover {
+  color: #ffb63b;
+}
+
+.mainbutton {
+  height: 20%;
+  color: #1f8fff;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.mainbutton:hover {
+  color: #ffb63b;
+}
+
+.qrcode-form h1 {
+  text-align: center;
+  font-size: 28px;
+}
+
+.qrcode-form-2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  vertical-align : middle;
+  flex-direction: column;
+  text-align-last: center;
+}
+
+.qr-title {
+  display: flex;
+  text-align: center;
+}
+
+#logout-modal {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.bad-btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: red;
+  font-size: 30px;
+  margin: 20px;
+}
+
+#contact-description {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+#contact-us-modal > label {
+  display: block;
+}
+
+#contact-us-modal > input, textarea {
+  width: 80%;
+  display: block;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+#validation-container > h1 {
+  margin-top: 15vh;
+}
+
+.modalqr-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+@media (max-width: 1000px) {
+  header, p, a {
+    font-size: 18px;
+  }
+  button {
+    margin: 0;
+    padding: 5px;
+  }
+  .logo-container {
+    width: fit-content;
+  }
+}
+
+@media (max-width: 650px) {
+  header, p, a {
+    font-size: 12px;
+  }
+}
+
+#error {
+  color: red;
+  text-align: center;
+}
+
+button > img {
+  margin-left: 1vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

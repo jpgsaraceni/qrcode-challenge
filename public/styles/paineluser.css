@@ -1,0 +1,99 @@
+body {
+    margin: 0 auto;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    text-decoration: none !important;
+}
+
+nav {
+    color: white;
+    font-weight: 500;
+}
+
+i {
+    margin-right: 1vh;
+}
+
+textarea {
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.navitem {
+    display: flex;
+    align-items: center;
+    color: white;
+    opacity: .75;
+    padding-left: 1.0rem;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+}
+
+.active {
+    background-color: #1c44ec;
+    opacity: 1;
+}
+
+.navitem:hover {
+    background-color: #1c44ec;
+    opacity: 1;
+}
+
+.brand-container {
+    padding: 1.5rem;
+}
+
+.brand-name {
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 1.875rem;
+    line-height: 2.25rem;
+}
+
+.brand-name:hover {
+    color: #D1D5DB;
+}
+
+.flex-container {
+    display: flex;
+}
+
+.flex-item-left {
+    flex: 1 225px;
+    background-color: #3d68ff;
+    height: 100vh;
+}
+
+.flex-item-right {
+    flex: 2 80%;
+    padding-left: 5vh;
+    padding-right: 5vh;
+    padding-top: 15vh;
+    background-color: #F5F8FA;
+}
+
+.mainbutton-comment {
+    border: none;
+    background-color: #3d68ff;
+    color: white;
+    width: 102px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

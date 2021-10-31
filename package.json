@@ -1,0 +1,32 @@
+{
+  "name": "alphafest",
+  "version": "1.0.0",
+  "description": "QR Code Challenge",
+  "main": "app.js",
+  "author": "Diego e João",
+  "license": "MIT",
+  "dependencies": {
+    "axios": "^0.21.1",
+    "bcrypt": "^5.0.1",
+    "cookie-parser": "^1.4.5",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-session": "^1.17.2",
+    "gm": "^1.23.1",
+    "jimp": "^0.16.1",
+    "lodash": "^4.17.21",
+    "nodemailer": "^6.6.2",
+    "qr-scanner": "^1.2.0",
+    "qrcode-reader": "^1.0.4",
+    "session-file-store": "^1.5.0",
+    "totalvoice-node": "^1.12.0"
+  },
+  "scripts": {
+    "build": "node app.js"
+  },
+  "devDependencies": {
+    "eslint": "^7.29.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.23.4"
+  }
+}

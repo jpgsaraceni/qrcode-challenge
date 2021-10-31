@@ -1,0 +1,214 @@
+* {
+  font-family: 'Ubuntu';
+}
+
+body {
+  background: #b2d6ff;
+  overflow: hidden;
+  height: 100vh;
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  background: #ffb32b;
+  height: 20vh;
+  min-height: 100px;
+  font-size: 24px;
+  box-shadow: 0px 0px 5px;
+  padding: 0 40px;
+}
+
+.logo-container {
+  display: flex;
+  width: 40vw;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+p {
+  place-self: center;
+  font-size: 36px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+}
+
+nav > button, #logout {
+  height: 100%;
+  padding: 10px 30px;
+}
+
+nav > button:hover, #logout:hover {
+  color: #1f8fff;
+  background: #ffb638;
+}
+
+#logout {
+  padding: 0;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  overflow: scroll;
+  overflow-x: hidden;
+  height: 80vh;
+}
+
+.event-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  margin: 50px;
+  height: 400px;
+  width: 300px;
+  border-radius: 5px;
+  padding: 15px;
+}
+
+.event-card > h2 {
+  height: 60%;
+  font-size: 30px;
+  text-align: center;
+}
+
+.event-card > h3 {
+  height: 20%;
+  font-size: 26px;
+  text-align: center;
+}
+
+.event-card > button {
+  height: 20%;
+  color: #1f8fff;
+  font-size: 36px;
+  font-weight: bold;
+}
+
+.event-card > button:hover {
+  color: #ffb63b;
+}
+
+main::-webkit-scrollbar {
+  width: 10px;
+}
+
+main::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #888;
+}
+
+main::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+@media (max-width: 1000px) {
+  button {
+    margin: 0;
+    padding: 5px;
+  }
+  /*.logo-container {
+    width: fit-content;
+  }*/
+}
+
+#event-details {
+  font-size: 36px;
+  text-align: center;
+}
+
+#participate-btn {
+  font-weight: bold;
+  color: #1f8fff;
+}
+
+#participate-btn:hover {
+  color: #ffb63b;
+}
+
+#logout-modal {
+  margin-top: 10px;
+  text-align: center;
+  font-size: 18px;
+}
+
+.bad-btn {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: red;
+  font-size: 30px;
+  margin: 20px;
+}
+
+@media (max-width: 650px) {
+  header, p {
+    font-size: 12px;
+  }
+}
+
+#qrcode {
+  text-align: center;
+  width: fit-content;
+}
+
+#qrcode > figure > img {
+  margin: auto;
+}
+
+#already-reserved {
+  display: none;
+}
+
+#qrcode-download, #send-message {
+  padding: 5px 10px;
+  border-radius: 5px;
+  background: #1f8fff;
+  font-size: 36px;
+  margin: 20px auto;
+}
+
+#contact-description {
+  margin-bottom: 20px;
+  font-size: 18px;
+}
+
+#contact-us-modal > label {
+  display: block;
+}
+
+#contact-us-modal > input, textarea {
+  width: 80%;
+  display: block;
+  border: 1px solid;
+  border-radius: 5px;
+}
+
+#no-vacancies-message {
+  color: red;
+  cursor: none;
+}
+
+#qrcode-img-container {
+  display: flex;
+  justify-content: center;
+}
+
+button > img {
+  margin-left: 1vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

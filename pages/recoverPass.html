@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <link rel="stylesheet" href="styles/clientLogin.css">
+  <title>AlphaFest | Alterar senha</title>
+  <link rel="shortcut icon" href="/favicon.ico" />
+</head>
+
+<body>
+  <div class="page-container">
+    <div class="left-side">
+      <img class="logo" src='/assets/img/logo.png' alt="Logo da alphafest." />
+    </div>
+
+    <div class="right-side" id="login-right-side">
+      <div class="login-container">
+        <h1>Alterar senha</h1>
+
+        <input type="email" placeholder="Digite seu E-mail" id="email-recover-input" />
+        <input type="text" placeholder="Digite seu Token" id="token-recover-input" />
+        <input type="password" placeholder="Digite sua nova senha" id="password-recover-input" />
+
+        <button class="primary-btn" id="recover-btn">Enviar</button>
+      </div>
+
+      <p class="sign-up-caption">
+        É novo aqui? <button class="secondary-btn" id="open-signup-btn" onclick="window.location.href = '/'">Cadastre-se!</button>
+      </p>
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/scripts/recoverPass.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,225 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  font-family: 'Ubuntu' sans-serif;
+}
+
+.page-container {
+  display: flex;
+}
+
+body {
+  background: #B2D6FF;
+  color: #333333;
+  overflow: hidden;
+}
+
+body, input, button {
+  font: 400 16px sans-serif;
+}
+
+h1, h2, h3, h4, p {
+  cursor: default;
+}
+
+button {
+  cursor: pointer;
+  border: none;
+}
+
+.login-container, .signup-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: fit-content;
+  align-self: center;
+  justify-self: center;
+  max-width: 50vw;
+  /* max-width: 400px; */
+  margin-bottom: 20px;
+  background: #fff;
+  border-radius: 5px;
+  padding: 22px 37px;
+  overflow: scroll !important;
+  overflow-x: hidden;
+  max-height: 78vh;
+}
+
+h1 {
+  font-size: 58px;
+  text-align: center;
+  margin-bottom: 30px;
+  color: #1f8fff;
+}
+
+h2 {
+  font-size: 32px;
+  text-align: center;
+  margin-bottom: 24px;
+  color: #1f8fff;
+}
+
+input {
+  display: flex;
+  flex-shrink: 0;
+  width: 68%;
+  height: 86px;
+  padding-left: 20px;
+  font-size: 30px;
+  background: inherit;
+  border: 1px solid #b2d6ff;
+  box-sizing: border-box;
+}
+
+input ~ input {
+  margin-top: 30px;
+}
+
+input::placeholder {
+  font-size: 30px;
+  color: #b2d6ff;
+}
+
+button {
+    background: none;
+    border: none;
+}
+
+button:hover {
+    color: #ffb32b;
+}
+
+.left-side {
+    width: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #ffb32b;
+    min-height: 100vh;
+}
+
+.logo {
+    max-width: 40vw;
+}
+
+.right-side {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 5% 10%;
+}
+
+.signup-container::-webkit-scrollbar, .login-container::-webkit-scrollbar {
+  width: 10px;
+}
+
+.signup-container::-webkit-scrollbar-thumb, .login-container::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background: #888;
+}
+
+.signup-container::-webkit-scrollbar-thumb:hover, .login-container::-webkit-scrollbar-thumb:hover {
+  background: #555;
+  border-radius: 5px;
+}
+
+.login-container {
+  overflow: hidden;
+}
+
+.forgot-password-text {
+    margin-top: 10px;
+    font-size: 22px;
+}
+
+.forgot-password-btn {
+    padding-left: 5px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #1f8fff;
+}
+
+.primary-btn {
+    font-weight: bolder;
+    margin-top: 40px;
+    padding: 10px;
+    font-size: 30px;
+    background: #1f8fff;
+    border-radius: 5px;
+}
+
+.sign-up-caption {
+    color: #4f4f4f;
+    font-size: 30px;
+    text-align: center;
+}
+
+.sign-up-caption > .secondary-btn {
+  padding: 0;
+}
+
+.secondary-btn {
+    font-weight: bold;
+    color: #1f8fff;
+    padding-left: 5px;
+    font-size: 30px;
+}
+
+span {
+    color: red;
+}
+
+.field-error-message {
+  display: none;
+}
+
+#signup-right-side {
+  display: none;
+}
+
+@media only screen and (max-width: 650px) and (min-width: 300px) {
+  .left-side {
+    display: none;
+  }
+  h1 {
+    font-size: 36px;
+  }
+  .right-side {
+    margin-top: 5vh;
+    width: 100%;
+    padding: 0 2vh;
+  }
+  .login-container {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+#select-modal > p {
+  text-align: center;
+  margin-bottom: 2vh;
+}
+
+#select-modal > button {
+  cursor: pointer;
+}
+
+#select-modal > div {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

@@ -1,0 +1,42 @@
+[
+  {
+    "id": 2,
+    "name": "sda",
+    "email": "diego222564@hotmail.com",
+    "telnumber": 11970151606,
+    "type": "user",
+    "password": "$2b$10$f/vnh3VUW9qZLWM.l94vTukO3Vv/h.gLkpGKsTygq3Y/fbaQlW1Hi",
+    "passwordResetToken": "",
+    "passwordResetExpires_fulldate": ""
+  },
+  {
+    "id": 3,
+    "name": "Joaozin",
+    "email": "joaozin@hotmail.com",
+    "password": "$2b$10$FM73UKT8VR57HMvuSW3xMurBiGvHRVvZizvNxj5BcLvqqME185x2K",
+    "telnumber": 1234567891011,
+    "type": "user",
+    "passwordResetToken": "",
+    "passwordResetExpires_fulldate": ""
+  },
+  {
+    "id": 4,
+    "name": "eu",
+    "email": "eu",
+    "password": "$2b$10$hz/FAiIIwbsOKKXrj98SsOvndeT04OBfi54Y.raWi3BPtqNw7ZnV2",
+    "telnumber": 123,
+    "type": "user",
+    "passwordResetToken": "",
+    "passwordResetExpires_fulldate": ""
+  },
+  {
+    "id": 3,
+    "name": "test",
+    "email": "user@test.test",
+    "telnumber": "(11) 97015-1606",
+    "password": "$2b$10$pXn2QbFYo7FWEAYe2yVJvu1TyQ0IbE3KI4/GhuS2JWn.KLgbIFuta",
+    "type": "user",
+    "passwordResetToken": "",
+    "passwordResetExpires_fulldate": ""
+  }
+]

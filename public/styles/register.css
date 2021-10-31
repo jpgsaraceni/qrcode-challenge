@@ -1,0 +1,76 @@
+body {
+    margin: 0;
+    background-color: #f8f4f4;
+    font-family: 'Roboto', sans-serif;
+}
+
+p {
+    text-align: center;
+    margin: 0;
+}
+
+h1 {
+    text-align: center;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 1vh;
+}
+
+.flexcontainer {
+    display: flex;
+    margin-top: 25vh;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.mainbutton {
+    border: none;
+    background-color: #3d68ff;
+    color: white;
+    width: 102px;
+    height: 40px;
+    border-radius: 10px;
+    text-align: center;
+    cursor: pointer;
+}
+
+.registerinput {
+    display: block;
+    padding: .375rem .75rem;
+    font-size: 1rem;
+    line-height: 1.5;
+    color: #495057;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    border-radius: .25rem;
+    transition: border-color .15s ease-in-out, box-shadow .15s ease-in-out;
+    margin-bottom: 1.5vh;
+}
+
+.flex-item {
+    margin-top: 2vh;
+}
+
+.flex-item-register {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    padding-left: 2vh;
+    padding-right: 2vh;
+    margin-top: 2vh;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type=number] {
+  -moz-appearance: textfield;
+}

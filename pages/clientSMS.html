@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <link rel="stylesheet" href="styles/clientLogin.css">
+  <title>AlphaFest | Recuperar senha</title>
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <script src="/scripts/modal.js"></script>
+</head>
+
+<body>
+  <!-- MODALS -->
+  <div id="select-modal" class="modal">
+    <p>Selecione o metódo de recuperar sua senha</p>
+    <div>
+      <button id="reset-email-btn" onclick="window.location.href = '/resetbyemail'"
+        class="reset-select-btn">E-mail</button>
+      <button id="reset-sms-btn" onclick="window.location.href = '/resetbysms'" class="reset-select-btn">SMS</button>
+    </div>
+  </div>
+  <!-- END MODALS -->
+  <div class="page-container">
+    <div class="left-side">
+      <img class="logo" src='/assets/img/logo.png' alt="Logo da alphafest." />
+    </div>
+
+    <div class="right-side" id="login-right-side">
+      <div class="login-container">
+        <h1>Recuperar senha | SMS</h1>
+
+        <input type="number" placeholder="Digite seu Número com DDD" id="sms-input" />
+
+        <button class="primary-btn" id="sms-btn">Enviar</button>
+      </div>
+
+      <p class="sign-up-caption">
+        É novo aqui/deseja logar? <button class="secondary-btn" id="open-signup-btn"
+          onclick="window.location.href = '/'">Clique aqui!</button>
+      </p>
+    </div>
+
+  </div>
+
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <script src="/scripts/sendSMS.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt">
+
+<head>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://fonts.googleapis.com/css2?family=Ubuntu&display=swap" rel="stylesheet">
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <link rel="stylesheet" href="styles/clientLogin.css">
+  <title>AlphaFest | Login</title>
+  <link rel="shortcut icon" href="/favicon.ico" />
+  <script src="/scripts/modal.js"></script>
+</head>
+
+<body>
+  <!-- MODALS -->
+  <div id="select-modal" class="modal">
+    <p>Selecione o metódo de recuperar sua senha</p>
+    <div>
+      <button id="reset-email-btn" onclick="window.location.href = '/resetbyemail'"
+        class="reset-select-btn">E-mail</button>
+      <button id="reset-sms-btn" onclick="window.location.href = '/resetbysms'" class="reset-select-btn">SMS</button>
+    </div>
+  </div>
+  <!-- END MODALS -->
+  <div class="page-container">
+    <div class="left-side">
+      <img class="logo" src='/assets/img/logo.png' alt="Logo da alphafest." />
+    </div>
+
+    <div class="right-side" id="login-right-side">
+      <div class="login-container">
+        <h1>Já possui cadastro?</h1>
+
+        <input type="e-mail" placeholder="Digite seu e-mail" id="email" />
+        <span class="field-error-message" id="no-email-message">Informe seu e-mail!</span>
+        <input type="password" placeholder="Digite sua senha" id="password" />
+        <span class="field-error-message" id="no-password-message">Informe sua senha!</span>
+        <span class="field-error-message" id="wrong-user-password">Usuário e/ou senha inválidos!</span>
+        <p class="forgot-password-text">
+          Esqueceu sua senha? Clique<button class="forgot-password-btn" onClick="modal6();">aqui</button>.
+        </p>
+
+        <button class="primary-btn" id="enter-btn">Entrar</button>
+      </div>
+
+      <p class="sign-up-caption">
+        É novo aqui? <button class="secondary-btn" id="open-signup-btn">Cadastre-se!</button>
+      </p>
+    </div>
+
+    <div class="right-side" id="signup-right-side">
+      <div class="signup-container">
+        <h2>Seja bem vindo(a) ao AlphaFest! Para prosseguir, informe seus dados:</h2>
+
+        <input type="text" placeholder="Digite seu nome" id="signup-name"
+          onChange="hideMessage('no-signup-name-message')" />
+        <span class="field-error-message" id="no-signup-name-message">Informe seu nome!</span>
+
+        <input type="e-mail" placeholder="Digite seu e-mail" id="signup-email"
+          onChange="hideMessage('no-signup-email-message')" />
+        <span class="field-error-message" id="no-signup-email-message">Informe seu e-mail!</span>
+        <span class="field-error-message" id="registered-email-message">Esse email já foi cadastrado!</span>
+
+        <input type="number" placeholder="Digite seu Número com DDD" id="signup-tel"
+          onChange="hideMessage('no-signup-tel-message')" />
+        <span class="field-error-message" id="no-signup-tel-message">Informe seu telefone com DDD!</span>
+
+        <input type="password" placeholder="Digite sua senha" id="signup-password"
+          onChange="hideMessage('no-signup-password-message')" />
+        <span class="field-error-message" id="no-signup-password-message">Informe sua senha!</span>
+
+        <input type="password" placeholder="Confirme sua senha" id="signup-confirm-password"
+          onChange="hideMessage('no-signup-confirm-password-message', 'no-match-signup-password-message')" />
+        <span class="field-error-message" id="no-signup-confirm-password-message">Confirme sua senha!</span>
+        <span class="field-error-message" id="no-match-signup-password-message">Senhas não conferem!</span>
+
+        <button class="primary-btn" id="signup-btn">Cadastrar</button>
+      </div>
+
+      <button class="secondary-btn" id="open-login-btn">Voltar para login</button>
+
+    </div>
+
+  </div>
+
+</body>
+
+<script src="/scripts/utils-clientLogin.js"></script>
+<script>
+  function hideMessage(id, id2) {
+    document.getElementById(id).style.display = 'none';
+    if (id2) document.getElementById(id2).style.display = 'none';
+  }
+</script>
+
+</html>
